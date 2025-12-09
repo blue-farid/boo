@@ -6,6 +6,9 @@ from bomber.services.bomber_service import BomberService
 
 class SnappService(BomberService):
     async def send_request(self, phone_number: str):
+        if phone_number.startswith('0'):
+            phone_number = phone_number.replace('0', '+98', 1)
+
         url = "https://app.snapp.taxi/api/api-passenger-oauth/v3/mutotp"
 
         headers = {
