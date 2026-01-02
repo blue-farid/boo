@@ -3,8 +3,11 @@ import asyncio
 from bomber.services.impl.snapp_service import SnappService
 from bomber.services.impl.box_service import BoxService
 from bomber.services.impl.snapp_food import SnappFoodService
+from bomber.services.impl.wallex_service import WallexService
+from bomber.services.impl.tetherland_service import TetherlandService
 
-SERVICES = [SnappService(), BoxService(), SnappFoodService()]
+
+SERVICES = [SnappService(), BoxService(), SnappFoodService(), WallexService(), TetherlandService()]
 
 
 async def run_bomber(phone_number: str):
